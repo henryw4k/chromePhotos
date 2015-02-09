@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="assets.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+  <script> 
+  /******ENTER IMAGE PIC HERE*******/
+  var pic_arr = ['assets/pic1.JPG',
+                 'assets/pic2.JPG',
+                 'assets/pic3.JPG'
+                 //...
+                ]; 
+
+
+  var counter = 0;
+  //preset 1st image
+  var imgURL = chrome.extension.getURL(pic_arr[counter++]);
+  document.getElementById("myImage").src = imgURL;
+  setInterval(function () {
+    $('#myImage').fadeOut("slow", function(){
+      var imgURL = chrome.extension.getURL(pic_arr[counter]);
+      document.getElementById("myImage").src = imgURL;
+      $('#myImage').fadeIn("slow");
+      counter++;
+      if(counter > pic_arr.length-1) {counter = 0};//reset
+    });
+  }, 5000);
+  </script>
+  
+  <div id="dragger">
+    <!-- anniveary date here -->
+    <p class="embed-title">&#9825 Enter Anniversary Date &#9825</p>
+      <img src='' id='myImage' class='embedder'>
+  </div>
+</body>
+</html>
+
+
+

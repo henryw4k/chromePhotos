@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "chromePhotos",
+  "description": "Photo popup when you are on your favorite sites",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/_/chrome/newtab*"],
+      // 
+      "js": ["jquery.js", "draggable.js", "app.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "index.html",
+    "assets/*"
+  ]
+
+}
