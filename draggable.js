@@ -37,7 +37,7 @@
   }
 
   function setPositionType(element) {
-    element.style.position = 'absolute';
+    element.style.position = 'fixed';
   }
 
   function setDraggableListeners(element) {

@@ -7,8 +7,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.google.com/_/chrome/newtab*"],
-      // 
+      "matches": ["<all_urls>"],
       "js": ["jquery.js", "draggable.js", "app.js"],
       "css": ["style.css"]
     }
