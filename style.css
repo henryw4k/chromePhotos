@@ -13,12 +13,19 @@
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   /*margin-left: 120px;
   margin-top: 25px;*/
+  margin-top: -10px;
+  margin-left: 10px;
   font-size: 20px;
   z-index: 1;
 }
 
 #dragger {
   z-index: 10000;
-  top: 200px;
-  left: 50%;
+  top: 50%;
+  left: 80%;
+}
+
+#myImage {
+  max-width: 50%;
+  max-height: 50%;
 }
